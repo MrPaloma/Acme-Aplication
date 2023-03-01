@@ -49,6 +49,7 @@ THIRD_PARTY_APPS = [
 ]
 LOCAL_APPS = [
     'monet.users.apps.UsersAppConfig',
+    'monet.tests.apps.TestsAppConfig',
 
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS

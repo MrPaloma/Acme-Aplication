@@ -7,6 +7,7 @@ from django.core.validators import RegexValidator
 # Utilities
 from monet.utils.models import MonetModel
 
+
 class User(MonetModel, AbstractUser):
     """ User model.
 
