@@ -6,5 +6,5 @@ from django.apps import AppConfig
 
 class UsersAppConfig(AppConfig):
     """Users app config"""
-    name = 'monet.users'
+    name = 'acme.users'
     verbose_name = 'Users'

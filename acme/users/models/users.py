@@ -5,10 +5,10 @@ from django.contrib.auth.models import AbstractUser
 from django.core.validators import RegexValidator
 
 # Utilities
-from monet.utils.models import MonetModel
+from acme.utils.models import AcmeModel
 
 
-class User(MonetModel, AbstractUser):
+class User(AcmeModel, AbstractUser):
     """ User model.
 
     Extends from django's Abstract User, change the username field to email
@@ -27,8 +27,6 @@ class User(MonetModel, AbstractUser):
         message = 'Phone number must be between 1 and 15 characters long '
     )
     phone_number = models.CharField(validators=[phone_regex], max_length=17, blank=True)
-    USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['username', 'first_name', 'last_name']
 
     def __str__(self) -> str:
         """return username"""

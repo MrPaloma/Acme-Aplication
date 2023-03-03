@@ -3,7 +3,7 @@
 import environ
 
 ROOT_DIR = environ.Path(__file__) - 3
-APPS_DIR = ROOT_DIR.path('monet')
+APPS_DIR = ROOT_DIR.path('acme')
 
 env = environ.Env()
 
@@ -20,9 +20,11 @@ USE_TZ = True
 
 # DATABASES
 DATABASES = {
-    'default': env.db('DATABASE_URL'),
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": str(ROOT_DIR('db.sqlite3'))
+    }
 }
-DATABASES['default']['ATOMIC_REQUESTS'] = True
 
 # URLs
 ROOT_URLCONF = 'config.urls'
@@ -48,9 +50,7 @@ THIRD_PARTY_APPS = [
     'rest_framework.authtoken',
 ]
 LOCAL_APPS = [
-    'monet.users.apps.UsersAppConfig',
-    'monet.tests.apps.TestsAppConfig',
-
+    'acme.users.apps.UsersAppConfig',
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 

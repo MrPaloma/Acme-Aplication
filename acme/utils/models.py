@@ -4,7 +4,7 @@
 from django.db import models
 
 
-class MonetModel(models.Model):
+class AcmeModel(models.Model):
     """
     This class is the basis for all templates
     attributes created and modified must be included in all template classes

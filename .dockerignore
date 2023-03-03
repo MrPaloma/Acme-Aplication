@@ -1,3 +1,6 @@
 .*
 !.env
 !.pylintrc
+.idea
+venv/
+db.sqlite3

@@ -271,7 +271,7 @@ tags
 
 ### Project template
 
-monet/media/
+acme/media/
 
 .pytest_cache/
 
@@ -280,3 +280,6 @@ monet/media/
 .env
 .envs/*
 !.envs/.local/
+
+# sqlite db
+db.sqlite3
